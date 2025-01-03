@@ -162,13 +162,19 @@ body{
     background-image:linear-gradient(var(--Light-slate-blue),var(--Light-royal-blue)); ;
 }
 @media (max-width: 375px) {
-
+    body{
+        padding: 0;
+    }
     .container {
-        max-width: 300px;
+        max-width: 375px;
         padding: 0;
     }
     .container .score{
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+        width: 375px;
+    }
+    .container .list{
+        width: 375px;
     }
 }
