@@ -1,0 +1,174 @@
+@font-face {
+    font-family: "Hanken Grotesk";
+    font-weight: 500,700,800;
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    /* Gradients */
+    /* -(background) */
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    /* -(circle) */
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+/* - Mobile: 375px
+- Desktop: 1440px */
+body{
+    font-size: 18px;
+    font-family: "Hanken Grotesk";
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--Pale-blue);
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--White);
+    border-radius: 25px;
+}
+.container .score{
+    width: 300px;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+}
+.container .score p{
+    color: var(--Light-lavender);
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+.container .score .num{
+    width: 150px;
+    height: 150px;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.container .score .bot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+.container .score h1{
+    color: var(--White);
+    font-size: 60px;
+}
+.container .score h2{
+    color: var(--White);
+    font-size: 25px;
+    font-weight: 700;
+}
+.container .score .bot p{
+    text-align: center;
+}
+.container .list{
+    width: 300px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+.container .list h3{
+    font-weight: 700;
+}
+.container .list .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+.container .list .item.a{
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+.container .list .item.a .title{
+    color: var(--Light-red);
+    font-weight: 500;
+}
+.container .list .item.b{
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+.container .list .item.b .title{
+    color: var(--Orangey-yellow);
+    font-weight: 500;
+}
+.container .list .item.c{
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+.container .list .item.c .title{
+    color: var(--Green-teal);
+    font-weight: 500;
+}
+.container .list .item.d{
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+.container .list .item.d .title{
+    color: var(--Cobalt-blue);
+    font-weight: 500;
+}
+.container .list .item .num{
+    color: var(--Light-lavender);
+    font-weight: 800;
+}
+.container .list .item .num span{
+    color: var(--Dark-gray-blue);
+    font-weight: 800;
+}
+.container .list footer{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .list footer a{
+    text-decoration: none;
+    background-color: #303B59;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 25px;
+    width: 100%;
+    text-align: center;
+}
+.container .list footer a:hover{
+    background-image:linear-gradient(var(--Light-slate-blue),var(--Light-royal-blue)); ;
+}
+@media (max-width: 375px) {
+
+    .container {
+        max-width: 300px;
+        padding: 0;
+    }
+    .container .score{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
